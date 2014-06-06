@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 	<head>
 		<meta charset="UTF-8">
 		<title>pjax</title>
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<script src="js/pjax.js"></script>
 	</head>
 
-	<body>
-		<header>
-			<h1>pjax</h1>
-		</header>
-		<div id="main">
-			<p>index.html</p>
+	<body id="pjax">
+		<div id="wrapper">
+			<header id="header">
+				<div id="header-inner">
+					<a class="home-link async" href="/index.html">
+						<h1 class="site-title">pjax</h1>
+					</a>
+					<nav id="nav">
+						<ul>
+							<li><a class="async" href=""></a></li>
+							<li><a class="async" href=""></a></li>
+							<li><a class="async" href=""></a></li>
+							<li><a class="async" href=""></a></li>
+						</ul>
+					</nav>
+					<div class="scroll-top-outer">
+						<a class="scroll-top" href="#top">
+							<img src="img/top.png" width="30px" height="30px">
+						</a>
+					</div>
+				</div>
+			</header>
+			<div id="main">
+				<article class="article">
+					<header class="article-header">
+						<h1 class="article-title"><a class="title-link async" href=""></a></h1>
+					</header>
+					<div class="article-content">
+					</div><!-- /#article-content -->
+				</article>
+			</div><!-- /main -->
 		</div>
 	</body>
 </html>
