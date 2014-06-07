@@ -2,13 +2,13 @@
 <html lang="ja">
 	<head>
 		<meta charset="UTF-8">
-		<title>pjax</title>
+		<title>sample3</title>
 		<link rel="stylesheet" href="/css/reset.css" type="text/css">
 		<link rel="stylesheet" href="/css/style.css" type="text/css">
 		<script defer src="/js/pjax.js"></script>
 	</head>
 
-	<body id="pjax">
+	<body id="sample3">
 		<div id="wrapper">
 			<header id="header">
 				<div id="header-inner">
@@ -32,10 +32,17 @@
 			<div id="main">
 				<article class="article">
 					<header class="article-header">
-						<h1 class="article-title"><a class="title-link async" href="/index.html">pjax</a></h1>
+						<h1 class="article-title"><a class="title-link async" href="/sample3.html">sample3</a></h1>
 					</header>
 					<div class="article-content">
-						<p>トップページなり</p>
+						<p>sample3なり</p>
+						<p><button id="button">このボタン</button>を押すとアラートが鳴ります。これはpjaxで動的にスクリプトが読み込まれたということです。</p>
+<script class="async">
+	var b = document.getElementById('button');
+	b.onclick = function() {
+		alert('ハローハロー');
+	};
+</script>
 					</div><!-- /#article-content -->
 				</article>
 			</div><!-- /main -->

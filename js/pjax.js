@@ -1,12 +1,13 @@
 (function() {
 
-	var id = ''; //非同期遷移する要素のid;
+	var id = 'main'; //非同期遷移する要素のid;
+
 	var transitionElement = document.getElementById(id);
 	var display = new Display(transitionElement);
 	var xhr = new XMLHttpRequest();
 
 	//履歴を上書き;
-	history.replaceState(location.href, null, null);
+	history.replaceState({url: location.href}, null, null);
 
 	//対象のアンカー要素に非同期通信するよう設定;
 	function setRequest() {
@@ -50,7 +51,7 @@
 	}
 
 	xhr.addEventListener('loadend', function() {
-		if(xhr.state === 200) {
+		if(xhr.status === 200) {
 			var response = xhr.response;
 			var responseElement = response.getElementById(id);
 
