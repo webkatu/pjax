@@ -7,7 +7,10 @@
 	var xhr = new XMLHttpRequest();
 
 	//履歴を上書き;
-	history.replaceState({url: location.href}, null, null);
+	(function() {
+		var url = location.href.replace(/index\..+/, '');
+		history.replaceState({url: url}, null, url);	
+	})();
 
 	//対象のアンカー要素に非同期通信するよう設定;
 	function setRequest() {
